@@ -1,11 +1,10 @@
 {
-  "name": "@edcoreorg/core",
-  "version": "0.1.0",
-  "description": "A Rust-based editor core, powering Flex, a new and powerful(?) IDE (but not yet)",
+  "name": "@edcore/core",
+  "version": "0.0.0",
   "main": "index.js",
   "types": "index.d.ts",
   "napi": {
-    "name": "edcore",
+    "name": "core",
     "triples": {
       "additional": [
         "aarch64-apple-darwin"
@@ -32,11 +31,5 @@
     "universal": "napi universal",
     "version": "napi version"
   },
-  "packageManager": "yarn@4.11.0",
-  "optionalDependencies": {
-    "@edcoreorg/core-win32-x64-msvc": "0.1.0",
-    "@edcoreorg/core-darwin-x64": "0.1.0",
-    "@edcoreorg/core-linux-x64-gnu": "0.1.0",
-    "@edcoreorg/core-darwin-arm64": "0.1.0"
-  }
+  "packageManager": "yarn@4.11.0"
 }

@@ -1,11 +1,10 @@
 [package]
 edition = "2021"
-name = "edcore"
+name = "edcore_core"
 version = "0.0.0"
 
 [lib]
 crate-type = ["cdylib"]
-name = "edcore"
 
 [dependencies]
 # Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
