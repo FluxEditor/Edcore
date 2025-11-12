@@ -1,9 +1,20 @@
 [package]
+edition = "2021"
 name = "edcore"
-version = "0.1.0"
-edition = "2024"
+version = "0.0.0"
+
+[lib]
+crate-type = ["cdylib"]
+name = "edcore"
 
 [dependencies]
-napi = { version = "2.16.17", features = ["napi4"] }
-napi-derive = "2.16.13"
-ropey = "1.6.1"
+# Default enable napi4 feature, see https://nodejs.org/api/n-api.html#node-api-version-matrix
+napi = { version = "2.12.2", default-features = false, features = ["napi4"] }
+napi-derive = "2.12.2"
+
+[build-dependencies]
+napi-build = "2.0.1"
+
+[profile.release]
+lto = true
+strip = "symbols"
